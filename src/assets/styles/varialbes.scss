@@ -1,0 +1,89 @@
+//breakpoints
+$pc_1920: 1920;
+$pc_1680: 1680;
+$pc_1440: 1280;
+$pc_1280: 1280;
+$pc_1024: 1024;
+$m_480: 480;
+$t_768: 767;
+
+
+@mixin size($width) {
+  @media only screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
+
+@mixin sizeMin($width) {
+  @media only screen and (min-width: ($width + 1) + 'px') {
+    @content;
+  }
+}
+
+@function calculateRem($width) {
+  @return calc(100vw / ($width / 10));
+}
+
+/* Заголовок большой h1 */
+@mixin largeTitle {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Заголовок маленький h2 1.6rem */
+@mixin smallTitle {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+/* Текст наборный 1.4rem */
+@mixin mediumText {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+/* Дескриптор 1.4rem */
+@mixin descriptor {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+/* Текст средний 1.2rem */
+@mixin normalText {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+/* Наборный текст  1.4rem */
+@mixin regularText {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+/* Текст малый 1.2rem */
+@mixin smallText {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h1 {
+  @include largeTitle;
+}
+
+h2 {
+  @include smallTitle;
+}

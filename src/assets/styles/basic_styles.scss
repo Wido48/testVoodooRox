@@ -1,0 +1,134 @@
+html {
+  font-size: calculateRem($pc_1920);
+}
+
+body {
+  background: #18191B;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+#app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+}
+
+a {
+  cursor: pointer;
+  display: block;
+  color: inherit;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+}
+
+@mixin container {
+  max-width: 180rem;
+  padding: 0 2rem;
+  position: relative;
+  margin: auto;
+}
+
+p{
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.container {
+  @include container
+}
+
+@media (min-width: 1441px) and (max-width: 1680px)  {
+  html {
+    font-size: calculateRem($pc_1680);
+  }
+  .container {
+    max-width: 144rem;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px)  {
+  html {
+    font-size: calculateRem($pc_1440);
+  }
+  .container {
+    max-width: 144rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px)  {
+  html {
+    font-size: calculateRem($pc_1280);
+  }
+  .container {
+    max-width: 128rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px)  {
+  html {
+    font-size: calculateRem($pc_1024);
+  }
+  .container {
+    max-width: 102rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px)  {
+  html {
+    font-size: calculateRem($t_768);
+  }
+  .container {
+    max-width: 76rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 599px)  {
+  html {
+    font-size: calculateRem(600);
+  }
+  .container {
+    max-width: 60rem;
+  }
+}
+
+@media screen and (max-width: 480px)  {
+  html {
+    font-size: calculateRem($m_480);
+  }
+  .container {
+    max-width: 48rem;
+  }
+}
