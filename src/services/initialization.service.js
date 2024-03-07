@@ -17,8 +17,6 @@ const compareUsersAndPostsLists = () => {
     for (let i = 0; i < posts?.length; i++) {
         for (let j = 0; j < users?.length; j++) {
             if (users[j]?.id === posts[i]?.userId) {
-                console.log(posts[i])
-                console.log(users[j])
                 posts[i].userInfo = users[j]
             }
 
